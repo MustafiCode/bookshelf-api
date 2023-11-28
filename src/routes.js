@@ -29,6 +29,11 @@ const routes = [
     path: '/books/{id}',
     handler: deleteBookByIdHandler,
   },
+  {
+    method: '*',
+    path: '/{any*}',
+    handler: () => 'Halaman tidak ditemukan.',
+  },
 ];
 
 module.exports = routes;
